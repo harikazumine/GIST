@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	input := "Aplikasi"
-	// Get Unicode code points.
+	// Input kata
 	n := 0
 	rune := make([]rune, len(input))
 	for _, r := range input {
@@ -12,11 +12,11 @@ func main() {
 		n++
 	}
 	rune = rune[0:n]
-	// Reverse
+	// Pembalik
 	for i := 0; i < n/2; i++ {
 		rune[i], rune[n-1-i] = rune[n-1-i], rune[i]
 	}
 	// Convert back to UTF-8.
-	output := string(rune)
-	fmt.Println(output)
+	hasil := string(rune)
+	fmt.Println(hasil)
 }
